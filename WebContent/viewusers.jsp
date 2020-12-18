@@ -17,7 +17,19 @@
 		request.setAttribute("list", list);
 	%>
 
-	<a href="logout.jsp">Logout</a>
+<!-- Only display user name if someone is logged in  -->
+	<c:if test="${not empty userSession}">
+		<table>
+			<tr>
+				<td>You are logged in </td>
+				<td>${ userSession.getName() }!</td>
+			</tr>
+			<tr>
+				<td><a href="logout.jsp">Logout</a></td>
+			</tr>
+		</table>
+	</c:if>
+<!-- ^^ Makes use of jstl ^^  -->
 
 	<table border="1" width="90%">
 		<tr>

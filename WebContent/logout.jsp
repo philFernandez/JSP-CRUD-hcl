@@ -7,7 +7,8 @@
 <title>Logout Page</title>
 </head>
 <body>
-<p>You logged out...</p>
+<p>You are logged out...</p>
+<%session.invalidate(); %>
 
 <a href="adduserform.jsp">Add User</a>
 <a href="viewusers.jsp">View Users</a>
